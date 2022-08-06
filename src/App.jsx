@@ -52,7 +52,12 @@ function App() {
         </div>
       </div>
       <div className="right_area">
-        <img src="./side-image.jpg" />
+
+        <picture>
+          <source media="(min-width: 1000px)" srcSet="./side-image-2x.jpg" />
+          <source media="(min-width: 700px)" srcSet="./side-image.jpg" />
+          <img src="./side-image.png" alt="IfItDoesntMatchAnyMedia" />
+        </picture>
       </div>
     </div>
   )
