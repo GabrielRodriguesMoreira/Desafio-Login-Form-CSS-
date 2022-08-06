@@ -23,7 +23,7 @@ function App() {
               <img src='./log-in.svg'></img>
               <h1>Faça Seu Login </h1>
             </div>
-            <p>Entre com suas informações de cadastro</p>
+            <p>Entre com suas informações de cadastro.</p>
           </div>
 
           <div class='email_form'>

@@ -6,7 +6,21 @@
   --form-background: #24221f;
   --primary-color: #ffc632;
 }
-
+html{
+  font-size: 10px;
+}
+h1{
+  font-size: 2.5rem ;
+}
+p{
+  font-size: 1.3rem;
+}
+label{
+  font-size: 1.6rem;
+}
+a{
+  font-size: 1.35rem;
+}
 body{
   margin: 0;
   background-color: var(--background);
@@ -28,7 +42,7 @@ body *{
   flex: 1 1 auto;
 }
 .logo{
-  margin: 15px;
+  margin: 30px 15px;
   width: fit-content;
 }
 .form_box{
@@ -45,16 +59,12 @@ body *{
 }
 .main_text_big{
   position: relative;
-  font-size: 0.7rem;
   display: flex;
-
-
 }
 .main_text_big h1{
   margin-left: 10px;
 }
 .main_text p{
-  font-size: 0.7rem;
   color: var(--text-base);
   margin-bottom: 10px;
 }
@@ -88,9 +98,7 @@ body *{
 .senha_form .textinput:focus + .inputicon{
   content: url("./lock-focus.svg");
 }
-.senha_form .textinput:focus + .inputicon:nth-child(5){
-  content: url("./check.svg");
-}
+
 .inputicon{
   position: absolute;
   bottom: 8px;
@@ -110,7 +118,6 @@ body *{
   align-items: center;
   color: var(--text-base);
   font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
 }
 
 .checkbox_configs{
@@ -147,12 +154,10 @@ body *{
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.7px;
-  font-size: 1rem;
   cursor: pointer;
 }
 .undebutton_text{
   margin-top: 10px;
-  font-size: 0.8rem;
   font-family: 'Poppins', sans-serif;
   color: var(--primary-color);
 }
