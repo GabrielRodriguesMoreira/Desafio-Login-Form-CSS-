@@ -15,16 +15,21 @@ body *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
+  text-decoration: none;
+}
+
+.app{
+  display: flex;
 }
 
 .left_area{
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1 1 auto;
 }
 .logo{
   margin: 15px;
+  width: fit-content;
 }
 .form_box{
   display: flex;
@@ -36,12 +41,13 @@ body *{
   font-family: 'Poppins', sans-serif;
   color: var(--text-title);
   width: 100%;
-  margin-left: 10%;
+  padding-left: 5%;
 }
 .main_text_big{
   position: relative;
   font-size: 0.7rem;
   display: flex;
+
 
 }
 .main_text_big h1{
@@ -73,10 +79,23 @@ body *{
   border-radius: 0.25rem;
   color: white;
 }
+.textinput:focus{
+  outline: 2px solid var(--primary-color);
+}
+.email_form .textinput:focus + .inputicon{
+  content: url("./mail-focus.svg");
+}
+.senha_form .textinput:focus + .inputicon{
+  content: url("./lock-focus.svg");
+}
+.senha_form .textinput:focus + .inputicon:nth-child(5){
+  content: url("./check.svg");
+}
 .inputicon{
   position: absolute;
   bottom: 8px;
   left: 8px;
+  cursor: pointer;
 }
 .inputicon:nth-child(4){
   left: auto;
@@ -106,6 +125,11 @@ body *{
   height: 15px;
   border-radius: 0.1rem;
   margin-right: 3px;
+  cursor: pointer;
+}
+.checkbox_configs input[type="checkbox"]:checked {
+  background-image: url("./check.svg");
+  background-size: 100%;
 }
 
 .password_configs strong{
@@ -124,10 +148,52 @@ body *{
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.7px;
   font-size: 1rem;
+  cursor: pointer;
 }
 .undebutton_text{
   margin-top: 10px;
   font-size: 0.8rem;
   font-family: 'Poppins', sans-serif;
   color: var(--primary-color);
+}
+
+.right_area{
+  display: none;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+.right_area img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .right_area{
+    display: block;
+  }
+  .left_area{
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .form_box{
+    background-color: var(--form-background);
+    width: 80%;
+    padding: 60px 0px;
+
+  }
+  .main_text{
+    width: 60%;
+    padding: 0;
+  }
+  .email_form, .senha_form, .password_configs, .logbutton{
+    width: 60%;
+  }
 }
