@@ -19,36 +19,36 @@ function App() {
         </div>
         <div className="form_box">
           <div className="main_text">
-            <div class='main_text_big'>
+            <div className='main_text_big'>
               <img src='./log-in.svg'></img>
               <h1>Faça Seu Login </h1>
             </div>
             <p>Entre com suas informações de cadastro.</p>
           </div>
 
-          <div class='email_form'>
-            <label htmlFor="email" class="inputlabel">E-mail</label>
-            <input type="text" name="email" id="" class='textinput' placeholder="Digite seu Email" autocomplete="off" />
-            <img src='./mail.svg' class="inputicon"></img>
+          <div className='email_form'>
+            <label htmlFor="email" className="inputlabel">E-mail</label>
+            <input type="email" name="email" id="" className='textinput' placeholder="Digite seu Email" autoComplete="email" />
+            <img src='./mail.svg' className="inputicon"></img>
           </div>
 
           <div className="senha_form">
-            <label htmlFor="senha" class="inputlabel">Senha</label>
-            <input type="password" name="senha" id="password" class='textinput' placeholder="Digite sua Senha" />
-            <img src='./lock.svg ' class="inputicon"></img>
-            <img src='./eye.svg' class="inputicon" id='eye' onClick={password_visibility}></img>
+            <label htmlFor="senha" className="inputlabel">Senha</label>
+            <input type="password" name="senha" id="password" className='textinput' placeholder="Digite sua Senha" />
+            <img src='./lock.svg ' className="inputicon"></img>
+            <img src='./eye.svg' className="inputicon" id='eye' onClick={password_visibility}></img>
           </div>
 
-          <div class="password_configs">
-            <div class='checkbox_configs'>
+          <div className="password_configs">
+            <div className='checkbox_configs'>
               <input type="checkbox" name="keep_logged" />
               <label htmlFor="keep_logged">Lembre-me</label>
             </div>
             <a href="#"><strong>Esqueci minha Senha</strong> </a>
           </div>
 
-          <button class='logbutton'>ENTRAR</button>
-          <a href="#" class='undebutton_text'>Não tem uma conta? <strong>Registre-se</strong></a>
+          <button className='logbutton'>ENTRAR</button>
+          <a href="#" className='undebutton_text'>Não tem uma conta? <strong>Registre-se</strong></a>
         </div>
       </div>
       <div className="right_area">
