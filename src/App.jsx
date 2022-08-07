@@ -17,7 +17,7 @@ function App() {
         <div className="logo">
           <img src="./logo.svg" alt="" />
         </div>
-        <div className="form_box">
+        <form className="form_box">
           <div className="main_text">
             <div className='main_text_big'>
               <img src='./log-in.svg'></img>
@@ -28,13 +28,13 @@ function App() {
 
           <div className='email_form'>
             <label htmlFor="email" className="inputlabel">E-mail</label>
-            <input type="email" name="email" id="" className='textinput' placeholder="Digite seu Email" autoComplete="email" />
+            <input type="email" name="email" id="" className='textinput' placeholder="Digite seu Email" autoComplete="email" minLength={3} required />
             <img src='./mail.svg' className="inputicon"></img>
           </div>
 
           <div className="senha_form">
             <label htmlFor="senha" className="inputlabel">Senha</label>
-            <input type="password" name="senha" id="password" className='textinput' placeholder="Digite sua Senha" />
+            <input type="password" name="senha" id="password" className='textinput' placeholder="Digite sua Senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
             <img src='./lock.svg ' className="inputicon"></img>
             <img src='./eye.svg' className="inputicon" id='eye' onClick={password_visibility}></img>
           </div>
@@ -47,9 +47,9 @@ function App() {
             <a href="#"><strong>Esqueci minha Senha</strong> </a>
           </div>
 
-          <button className='logbutton'>ENTRAR</button>
+          <button type="submit" className='logbutton'>ENTRAR</button>
           <a href="#" className='undebutton_text'>Não tem uma conta? <strong>Registre-se</strong></a>
-        </div>
+        </form>
       </div>
       <div className="right_area">
 
